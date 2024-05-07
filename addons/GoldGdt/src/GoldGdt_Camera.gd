@@ -17,13 +17,17 @@ var update : bool = false
 var isCurrent : bool
 	
 func _ready() -> void:
-	if not is_multiplayer_authority(): return
+	if get_multiplayer_authority() == multiplayer.get_unique_id():
+		camera.current = true
+	else:
+		camera.current = false
+		set_process(false)
+		set_process_input(false)
 	set_as_top_level(true) # Detach from pawn node.
 	# Initialize interpolation transforms.
 	global_transform = target.global_transform
 	t_prev = target.global_transform
 	t_curr = target.global_transform
-	camera.current = true
 
 func _process(delta_) -> void:
 	if not is_multiplayer_authority(): return

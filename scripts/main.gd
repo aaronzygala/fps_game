@@ -37,6 +37,7 @@ func _on_join_button_pressed():
 	enet_peer.create_client("localhost", PORT)
 	multiplayer.multiplayer_peer = enet_peer
 	
+	
 func _choose_level():
 	#var level_number = rng.randi_range(0, 1)
 	

@@ -29,11 +29,12 @@ func _unhandled_input(_event):
 	if Input.is_action_just_pressed("shoot") \
 			and (anim_player.current_animation != "shoot" \
 			and anim_player.current_animation != "reload"):
+		raycast.force_raycast_update()
 		if current_ammo > 0:
 			play_shoot_effects.rpc()
-			if (raycast.is_colliding()) and (raycast.get_collider() is GoldGdt_Pawn ):
+			if (raycast.is_colliding()) and (raycast.get_collider() is CharacterBody3D ):
 				var hit_player = raycast.get_collider()
-				hit_player.receive_damage.rpc_id(hit_player.get_multiplayer_authority())
+				hit_player.get_parent().receive_damage.rpc_id(hit_player.get_multiplayer_authority())
 		else:
 			play_reload_effects.rpc()
 	
@@ -51,6 +52,11 @@ func _process(delta):
 			_override_view_rotation(Vector2(deg_to_rad(start_view_yaw), deg_to_rad(start_view_pitch)))
 
 func _ready():
+	if get_multiplayer_authority() == multiplayer.get_unique_id():
+		Camera.camera.current = true
+	else:
+		set_process(false)
+		set_process_input(false)
 	if is_master:
 		global_transform = initial_transform
 	_override_view_rotation(Vector2(deg_to_rad(start_view_yaw), deg_to_rad(start_view_pitch)))

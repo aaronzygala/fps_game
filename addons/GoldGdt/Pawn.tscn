@@ -414,9 +414,10 @@ near = 0.001
 [node name="Head" type="Node3D" parent="Interpolated Camera/Arm/Arm Anchor/Camera"]
 
 [node name="RayCast3D" type="RayCast3D" parent="Interpolated Camera/Arm/Arm Anchor/Camera/Head"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.08165e-12, 2.08165e-12, -0.1)
-target_position = Vector3(2.08165e-12, 2.08165e-12, -500)
-collision_mask = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -0.6)
+target_position = Vector3(2.08165e-12, 2.08165e-12, -10)
+collision_mask = 2
+collide_with_areas = true
 
 [node name="Gun" parent="Interpolated Camera/Arm/Arm Anchor/Camera/Head" instance=ExtResource("10_8lda2")]
 transform = Transform3D(-0.965925, 0.258822, -9.36934e-07, -1.26261e-21, -3.61999e-06, -1, -0.258822, -0.965925, 3.49664e-06, 0.339635, -0.216999, -0.295278)
