@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dmsfekqtyqtrr"
+path="res://.godot/imported/Halo Outline.ttf-9231ce3cab5d3ef474149907c9837467.fontdata"
+
+[deps]
+
+source_file="res://fonts/halo/Halo Outline.ttf"
+dest_files=["res://.godot/imported/Halo Outline.ttf-9231ce3cab5d3ef474149907c9837467.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

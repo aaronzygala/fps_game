@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d33uud07yrhsx"]
+
+[ext_resource type="Script" path="res://scripts/bullet_tracer.gd" id="1_xqory"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c28os"]
+radius = 0.05
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23yeo"]
+albedo_color = Color(0.976471, 0.729412, 0.294118, 1)
+emission = Color(1, 0.8, 0, 1)
+emission_energy_multiplier = 0.5
+
+[node name="BulletTracer" type="Node3D" node_paths=PackedStringArray("_trail_mesh")]
+script = ExtResource("1_xqory")
+_trail_mesh = NodePath("Trail")
+_bullet_trail_life_time = 0.5
+_bullet_trail_speed = 80.0
+
+[node name="Trail" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, -2.09272e-16, -7.62298e-25, -7.62298e-25, -1.31134e-08, 0.05, -3.48787e-17, -0.3, -2.18557e-09, 2.08165e-12, 2.08165e-12, -0.0794893)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_c28os")
+surface_material_override/0 = SubResource("StandardMaterial3D_23yeo")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0827802)
+visible = false
+light_color = Color(0.788235, 0.776471, 0, 1)
+omni_range = 3.558

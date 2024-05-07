@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqs5p7urppmek"
+path="res://.godot/imported/uziLong.obj-21e36a73383be669c6db503e2ca29bea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uziLong.obj-21e36a73383be669c6db503e2ca29bea.mesh"]
+
+source_file="res://models/kenney_weapon-pack/Models/uziLong.obj"
+dest_files=["res://.godot/imported/uziLong.obj-21e36a73383be669c6db503e2ca29bea.mesh", "res://.godot/imported/uziLong.obj-21e36a73383be669c6db503e2ca29bea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://erk7stdqmxob"]
+
+[ext_resource type="Script" path="res://scripts/player_animations.gd" id="1_jjmww"]
+[ext_resource type="PackedScene" uid="uid://bk1exu1p74wrs" path="res://addons/GoldGdt/Pawn.tscn" id="2_6qyqf"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_jjmww")
+
+[node name="Pawn" parent="." instance=ExtResource("2_6qyqf")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -10.0
+pitch_scale = 0.01
